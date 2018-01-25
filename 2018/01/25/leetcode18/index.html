@@ -109,18 +109,18 @@
 
 
 
-<meta name="description" content="1234567891011121314151617181920212223242526272829class Solution &amp;#123;public:    int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        int len = nums.size();        sort(nums.begi">
+<meta name="description" content="1234567891011121314151617181920212223242526272829303132class Solution &amp;#123;public:    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; fourSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        sort(nums.begin(),">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode--3Sum Closest">
-<meta property="og:url" content="http://iflyfor.fun/2018/01/23/leetcode16/index.html">
+<meta property="og:title" content="leetcode--4Sum">
+<meta property="og:url" content="http://iflyfor.fun/2018/01/25/leetcode18/index.html">
 <meta property="og:site_name" content="命运石之门">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829class Solution &amp;#123;public:    int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        int len = nums.size();        sort(nums.begi">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132class Solution &amp;#123;public:    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; fourSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        sort(nums.begin(),">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T15:03:58.769Z">
+<meta property="og:updated_time" content="2018-01-25T13:50:37.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode--3Sum Closest">
-<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829class Solution &amp;#123;public:    int threeSumClosest(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        int len = nums.size();        sort(nums.begi">
+<meta name="twitter:title" content="leetcode--4Sum">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132class Solution &amp;#123;public:    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; fourSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;        sort(nums.begin(),">
 
 
 
@@ -149,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="http://iflyfor.fun/2018/01/23/leetcode16/"/>
+  <link rel="canonical" href="http://iflyfor.fun/2018/01/25/leetcode18/"/>
 
 
 
 
 
-  <title>leetcode--3Sum Closest | 命运石之门</title>
+  <title>leetcode--4Sum | 命运石之门</title>
   
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iflyfor.fun/2018/01/23/leetcode16/">
+    <link itemprop="mainEntityOfPage" href="http://iflyfor.fun/2018/01/25/leetcode18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呱呱">
@@ -315,7 +315,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">leetcode--3Sum Closest</h2>
+          <h2 class="post-title" itemprop="name headline">leetcode--4Sum</h2>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T22:59:48+08:00">
-                2018-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T21:41:40+08:00">
+                2018-01-25
               </time>
             
 
@@ -392,9 +392,8 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.size();</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="function"><span class="keyword">long</span> <span class="title">last</span><span class="params">(INT_MAX)</span></span>;</span><br><span class="line">        <span class="keyword">long</span> diff = last-target;</span><br><span class="line">        <span class="function"><span class="keyword">long</span> <span class="title">result</span><span class="params">(INT_MAX)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len<span class="number">-2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> j = i+<span class="number">1</span>, k = len<span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">while</span>(j&lt;k)&#123;</span><br><span class="line">                last = nums[i]+nums[j]+nums[k];</span><br><span class="line">                <span class="keyword">if</span>(diff&gt;<span class="built_in">abs</span>(last-target))&#123;</span><br><span class="line">                    diff = <span class="built_in">abs</span>(last-target);</span><br><span class="line">                    result = last;</span><br><span class="line">                &#125;     </span><br><span class="line">                <span class="keyword">if</span>(nums[j]+nums[k]&lt;target-nums[i])&#123;      </span><br><span class="line">                    ++j;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(nums[j]+nums[k]&gt;target-nums[i])&#123;</span><br><span class="line">                    --k;</span><br><span class="line">                &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> target;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>跟3Sum这道题一样，都是先固定i，然后让j，k分别指向剩余的数列的头尾，然后向中间移动。这道题值得注意的是要设置两个变量，一个diff，一个result。diff用来记录三个元素之和跟target的差值，result记录此时的三元素之和，最后返回result就行。有了之前的3Sum的经验，这道题还是比较简单的。</p>
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; fourSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="keyword">int</span> len = nums.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; v;</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; s;</span><br><span class="line">        <span class="keyword">if</span>(len&lt;<span class="number">4</span>) <span class="keyword">return</span> v;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len<span class="number">-3</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;len<span class="number">-2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> k=j+<span class="number">1</span>, l=len<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">while</span>(k&lt;l)&#123;</span><br><span class="line">                    <span class="keyword">int</span> sum = nums[i]+nums[j]+nums[k]+nums[l];</span><br><span class="line">                    <span class="keyword">if</span>(sum&lt;target)&#123;</span><br><span class="line">                        ++k;</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(sum&gt;target)&#123;</span><br><span class="line">                        --l;</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp = &#123;nums[i],nums[j],nums[k],nums[l]&#125;;</span><br><span class="line">                        s.insert(temp);</span><br><span class="line">                        ++k;</span><br><span class="line">                        --l;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> item:s)&#123;</span><br><span class="line">            v.push_back(item);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>与3Sum一样的做法，不赘述。</p>
 
       
     </div>
@@ -425,8 +424,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/23/diary0123/" rel="next" title="入职研究院">
-                <i class="fa fa-chevron-left"></i> 入职研究院
+              <a href="/2018/01/24/nnpaper1/" rel="next" title="神经网络文献阅读">
+                <i class="fa fa-chevron-left"></i> 神经网络文献阅读
               </a>
             
           </div>
@@ -435,8 +434,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/24/leetcode17/" rel="prev" title="leetcode--Letter Combinations of a Phone Number">
-                leetcode--Letter Combinations of a Phone Number <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/25/leetcode19/" rel="prev" title="leetcode--Remove Nth Node From End of List">
+                leetcode--Remove Nth Node From End of List <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
