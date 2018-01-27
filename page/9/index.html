@@ -93,7 +93,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -109,18 +109,16 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536class Solution &amp;#123;public:    bool isValid(string s) &amp;#123;        stack&amp;lt;char&amp;gt; st;        for(auto i:s)&amp;#123;            switch(i">
-<meta name="keywords" content="leetcode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="leetcode--Valid Parentheses">
-<meta property="og:url" content="http://iflyfor.fun/2018/01/27/leetcode20/index.html">
+<meta name="description" content="嘟嘟噜">
+<meta property="og:type" content="website">
+<meta property="og:title" content="命运石之门">
+<meta property="og:url" content="http://iflyfor.fun/page/9/index.html">
 <meta property="og:site_name" content="命运石之门">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536class Solution &amp;#123;public:    bool isValid(string s) &amp;#123;        stack&amp;lt;char&amp;gt; st;        for(auto i:s)&amp;#123;            switch(i">
+<meta property="og:description" content="嘟嘟噜">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T17:09:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode--Valid Parentheses">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536class Solution &amp;#123;public:    bool isValid(string s) &amp;#123;        stack&amp;lt;char&amp;gt; st;        for(auto i:s)&amp;#123;            switch(i">
+<meta name="twitter:title" content="命运石之门">
+<meta name="twitter:description" content="嘟嘟噜">
 
 
 
@@ -149,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://iflyfor.fun/2018/01/27/leetcode20/"/>
+  <link rel="canonical" href="http://iflyfor.fun/page/9/"/>
 
 
 
 
 
-  <title>leetcode--Valid Parentheses | 命运石之门</title>
+  <title>命运石之门</title>
   
 
 
@@ -180,7 +178,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -283,9 +283,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://iflyfor.fun/2018/01/27/leetcode20/">
+    <link itemprop="mainEntityOfPage" href="http://iflyfor.fun/2018/01/19/leetcode5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="呱呱">
@@ -315,7 +315,9 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">leetcode--Valid Parentheses</h2>
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/19/leetcode5/" itemprop="url">leetcode--Longest Palindromic Substring解析</a></h2>
         
 
         <div class="post-meta">
@@ -327,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T01:06:51+08:00">
-                2018-01-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T01:53:58+08:00">
+                2018-01-19
               </time>
             
 
@@ -369,11 +371,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
 
           
 
@@ -392,10 +389,17 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; st;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> i:s)&#123;</span><br><span class="line">            <span class="keyword">switch</span>(i)&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'('</span>:</span><br><span class="line">                    st.push(<span class="string">'('</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'['</span>:</span><br><span class="line">                    st.push(<span class="string">'['</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'&#123;'</span>:</span><br><span class="line">                    st.push(<span class="string">'&#123;'</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">')'</span>:</span><br><span class="line">                    <span class="keyword">if</span>(st.empty()||st.top()!=<span class="string">'('</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    st.pop();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">']'</span>:</span><br><span class="line">                    <span class="keyword">if</span>(st.empty()||st.top()!=<span class="string">'['</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    st.pop();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">'&#125;'</span>:</span><br><span class="line">                    <span class="keyword">if</span>(st.empty()||st.top()!=<span class="string">'&#123;'</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    st.pop();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(st.empty())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>如果想到要用栈来存储的话，此题还是比较容易的，但由于我数据结构知识亟待补充，故列上来以备忘。</p>
-
+        
+          <p>2018年01月20日11:27:14解决。</p>
+<h2 id="较优解法"><a href="#较优解法" class="headerlink" title="较优解法"></a>较优解法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Beat 95.56%</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//当s长度为1或为0时直接就是回文。</span></span><br><span class="line">        <span class="keyword">if</span> (s.size() &lt; <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        <span class="comment">//定义s长度，回文的最左边的值，回文的最大长度，两个用来记录的变量left,right</span></span><br><span class="line">        <span class="keyword">int</span> len = s.size(), max_left = <span class="number">0</span>, max_len = <span class="number">1</span>, left, right;</span><br><span class="line">        <span class="comment">//以start为中心，向两头寻找是否相等，当len-start&lt;=max_len/2停止,</span></span><br><span class="line">        <span class="comment">//因为此时以start为中心的回文不可能比最大回文长度长了，就没有往后面寻找的必要。</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> start = <span class="number">0</span>; start &lt; len &amp;&amp; len - start &gt; max_len / <span class="number">2</span>;) &#123;</span><br><span class="line">            <span class="comment">//left,right都在最开始的位置</span></span><br><span class="line">            left = right = start;</span><br><span class="line">            <span class="comment">//寻找回文的最右端：如果右端的字符和当前字符相同，就把right向右移一格。</span></span><br><span class="line">            <span class="keyword">while</span> (right &lt; len - <span class="number">1</span> &amp;&amp; s[right + <span class="number">1</span>] == s[right])</span><br><span class="line">                ++right;</span><br><span class="line">            <span class="comment">//现在left和right之间都是某个字符的重复，所以肯定是回文。</span></span><br><span class="line">            <span class="comment">//让start向right右移一格，作为下一个中心点</span></span><br><span class="line">            start = right + <span class="number">1</span>;</span><br><span class="line">            <span class="comment">//right右移，left左移，如果right和left所指的字符仍然相等，就把回文的</span></span><br><span class="line">            <span class="comment">//left和right向两边扩展一格。</span></span><br><span class="line">            <span class="keyword">while</span> (right &lt; len - <span class="number">1</span> &amp;&amp; left &gt; <span class="number">0</span> &amp;&amp; s[right + <span class="number">1</span>] == s[left - <span class="number">1</span>]) &#123;</span><br><span class="line">                ++right;</span><br><span class="line">                --left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//判断目前的回文长度是不是比最大回文长度大，如果是，</span></span><br><span class="line">            <span class="comment">//就替换最大回文长度，并替换回文最左值。(这两个值能唯一确定回文的情况。)</span></span><br><span class="line">            <span class="keyword">if</span> (max_len &lt; right - left + <span class="number">1</span>) &#123;</span><br><span class="line">                max_left = left;</span><br><span class="line">                max_len = right - left + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(max_left, max_len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/19/leetcode5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -410,40 +414,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/01/25/leetcode19/" rel="next" title="leetcode--Remove Nth Node From End of List">
-                <i class="fa fa-chevron-left"></i> leetcode--Remove Nth Node From End of List
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/27/leetcode21/" rel="prev" title="leetcode--Merge Two Sorted Lists">
-                leetcode--Merge Two Sorted Lists <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -453,11 +431,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span>
+  </nav>
+
 
 
           </div>
@@ -465,10 +446,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -681,10 +658,10 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-
+  
 
   
 
@@ -733,6 +710,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
